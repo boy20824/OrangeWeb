@@ -33,6 +33,15 @@ public class Member implements Serializable {
     @TableField("member_no")
     private String memberNo;
 
+    @TableField("account")
+    private String account;
+
+    @TableField("pwd")
+    private String pwd;
+
+    @TableField("login_type")
+    private String loginType;
+
     @TableField("phone_number")
     private Integer phoneNumber;
 

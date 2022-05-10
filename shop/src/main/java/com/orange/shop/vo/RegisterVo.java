@@ -16,25 +16,24 @@ public class RegisterVo implements Serializable {
     private String memberNo;
 
     @NotBlank(message = "電話號號碼不能為空!")
-    @Pattern(regexp = "^\\d{10,15}$",message = "電話號碼不符合規則!")
     @Size(max=16,min=11)
-    private Integer phoneNumber;
+    private String phoneNumber;
 
     @NotBlank(message = "帳號不能為空!")
     private String account;
 
     @NotBlank(message = "密碼不能為空!")
-    @Size(max=12,min=6)
+    @Pattern(regexp = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$",message = "密碼不符合規則!")
     private String pwd;
 
     @NotBlank(message = "地址不能為空!")
     private String address;
 
     @NotBlank(message = "郵件信箱不能為空!")
+    @Pattern(regexp = "^[a-zA-Z0-9_!#$%&'\\*+/=?{|}~^.-]+@[a-zA-Z0-9.-]+$",message = "郵件信箱不符合規則!")
     private String email;
 
     @NotBlank(message = "姓名不能為空!")
-    @Pattern(regexp = "^+\\d{10}$",message = "姓名不符合規則!")
     @Max(20)
     private String name;
 

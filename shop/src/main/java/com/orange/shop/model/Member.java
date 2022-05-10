@@ -43,7 +43,7 @@ public class Member implements Serializable {
     private String loginType;
 
     @TableField("phone_number")
-    private Integer phoneNumber;
+    private String phoneNumber;
 
     @TableField("address")
     private String address;

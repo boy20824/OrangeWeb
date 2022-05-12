@@ -25,7 +25,7 @@ public class CodeGenerator {
     public static String username="root";
     public static String password="123456";
     //父级别包名称
-    public static String parentPackage = "com.orange.web";
+    public static String parentPackage = "com.orange.shop";
     //代码生成的目标路径
     public static String generateTo = "/generator/src/main/java";
     //mapper.xml的生成路径

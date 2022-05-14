@@ -9,14 +9,15 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.orange</groupId>
     <artifactId>generator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>generator</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

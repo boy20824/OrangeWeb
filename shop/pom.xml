@@ -9,7 +9,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.orange</groupId>
     <artifactId>shop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>shop</name>
@@ -63,12 +62,6 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.orange</groupId>
-            <artifactId>generator</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 

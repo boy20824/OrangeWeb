@@ -2,6 +2,7 @@ package com.orange.web.shop.service;
 
 import com.orange.web.shop.model.Member;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.orange.web.shop.vo.RegisterVo;
 
 /**
  * <p>
@@ -12,5 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2022-04-30
  */
 public interface IMemberService extends IService<Member> {
+
+    void registerMember(RegisterVo registerVo);
 
 }

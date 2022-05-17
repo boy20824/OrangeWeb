@@ -12,5 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2022-04-30
  */
 public interface IMemberService extends IService<Member> {
+	
+	public Member getMemberByEmail(String email);
 
 }

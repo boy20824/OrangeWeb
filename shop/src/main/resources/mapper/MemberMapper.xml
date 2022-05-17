@@ -14,5 +14,15 @@
         <result column="birthday" property="birthday" />
         <result column="date_created" property="dateCreated" />
     </resultMap>
+    <resultMap id="LoginResultMap" type="com.orange.web.shop.model.Member">
+        <result column="email" property="email" />
+        <result column="pwd" property="pwd" />
+    </resultMap>
+    
+    <select id="selectMemberByEmail" parameterType="string" resultMap="LoginResultMap">
+    	SELECT email, pwd
+    	FROM member
+    	WHERE email = #{email}
+    </select>
 
 </mapper>

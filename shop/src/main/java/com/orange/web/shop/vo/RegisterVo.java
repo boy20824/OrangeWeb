@@ -1,6 +1,8 @@
 package com.orange.web.shop.vo;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
+import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
@@ -11,9 +13,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
+@ApiModel("RegisterVo")
 public class RegisterVo implements Serializable {
-
-    private String memberNo;
 
     @NotBlank(message = "電話號號碼不能為空!")
     @Size(max=16,min=11)
@@ -34,12 +35,12 @@ public class RegisterVo implements Serializable {
     private String email;
 
     @NotBlank(message = "姓名不能為空!")
-    @Max(20)
+    @Length(max = 20)
     private String name;
 
     private String gender;
 
-    private LocalDate birthday;
+    private String birthday;
 
-    private LocalDateTime dateCreated;
+    private String loginType;
 }

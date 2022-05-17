@@ -2,6 +2,7 @@ package com.orange.web.shop.service;
 
 import com.orange.web.shop.model.Member;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.orange.web.shop.vo.RegisterVo;
 
 /**
  * <p>
@@ -14,5 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IMemberService extends IService<Member> {
 	
 	public Member getMemberByEmail(String email);
+
+    void registerMember(RegisterVo registerVo);
 
 }

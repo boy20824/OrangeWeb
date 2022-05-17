@@ -7,6 +7,8 @@ import com.orange.web.shop.mapper.MemberMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.orange.web.shop.model.Member;
 import com.orange.web.shop.service.IMemberService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import com.orange.web.shop.utils.ServiceException;
 import com.orange.web.shop.vo.RegisterVo;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +32,15 @@ import java.time.format.DateTimeFormatter;
 @Service
 @Slf4j
 public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> implements IMemberService {
+	
+	@Autowired 
+	MemberMapper memberMapper;
+
+	@Override
+	public Member getMemberByEmail(String email) {
+		Member member = memberMapper.selectMemberByEmail(email);
+		return member;
+	}
 
     @Resource
     MemberMapper memberMapper;

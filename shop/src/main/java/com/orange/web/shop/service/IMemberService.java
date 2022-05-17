@@ -13,6 +13,8 @@ import com.orange.web.shop.vo.RegisterVo;
  * @since 2022-04-30
  */
 public interface IMemberService extends IService<Member> {
+	
+	public Member getMemberByEmail(String email);
 
     void registerMember(RegisterVo registerVo);
 

@@ -32,18 +32,15 @@ import java.time.format.DateTimeFormatter;
 @Service
 @Slf4j
 public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> implements IMemberService {
-	
-	@Autowired 
-	MemberMapper memberMapper;
+
+    @Resource
+    MemberMapper memberMapper;
 
 	@Override
 	public Member getMemberByEmail(String email) {
 		Member member = memberMapper.selectMemberByEmail(email);
 		return member;
 	}
-
-    @Resource
-    MemberMapper memberMapper;
 
     BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
